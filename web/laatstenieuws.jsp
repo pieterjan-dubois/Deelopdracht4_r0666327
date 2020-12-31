@@ -14,6 +14,10 @@
 </head>
 <body>
 <div class="wrapper">
+    <nav class="banner-main">
+        <img class="imagee" src="images/foodbanner.png" alt="banner met food network logo">
+    </nav>
+
     <jsp:include page="header.jsp">
         <jsp:param name="actual" value="Laatste nieuws"/>
     </jsp:include>
@@ -24,7 +28,7 @@
         <li>Bananen</li>
         <li>Wortelen</li>
     </main>
-    <footer> &copy; Webontwikkeling 2, UC Leuven-Limburg</footer>
+
 </div>
 </body>
 </html>

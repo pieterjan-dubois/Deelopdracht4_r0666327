@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%-- Created by IntelliJ IDEA. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -47,12 +48,13 @@
         <p>
           <input type="submit" value="Submit">
         </p>
-
-
       </form>
     </section>
+  </section>
+    <section>
     <img class="home_background" src="images/homeimg.jpg" alt="photo of fruits and vegetables and meat">
   </section>
+
 
 
 </div>

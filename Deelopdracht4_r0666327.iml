@@ -43,7 +43,16 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../Toegepaste informatica 19-20/semester 2/web2/selenium-server-4.0.0-alpha-6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../../../Toegepaste informatica 19-20/semester 2/web2/selenium-server-4.0.0-alpha-6.jar!/" />

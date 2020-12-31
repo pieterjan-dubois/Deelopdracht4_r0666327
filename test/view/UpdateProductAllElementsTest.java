@@ -1,5 +1,6 @@
 package view;
 
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,11 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class NoNameElementTest {
+public class UpdateProductAllElementsTest {
     private WebDriver driver;
     String url = "http://localhost:8080/web_war_exploded/";
 
@@ -22,29 +24,31 @@ public class NoNameElementTest {
         driver = new ChromeDriver();
     }
 
+
     @Test
-    public void test_form_shown_again_when_name_field_is_empty() {
-        driver.get(url + "winkel.jsp");
-        WebElement naamInput = driver.findElement(By.id("productnaam"));
+    public void test_update_form_works_when_hoeveelheid_and_prijsaanbod_field_is_filled_in_correctly(){
+        driver.get(url + "update.jsp");
+        WebElement naamInput = driver.findElement(By.id("naam"));
         naamInput.clear();
-        naamInput.sendKeys("");
+        naamInput.sendKeys("kip");
 
         WebElement hoeveelheidInput = driver.findElement(By.id("hoeveelheid"));
         hoeveelheidInput.clear();
         hoeveelheidInput.sendKeys("12");
 
-        WebElement prijsaanbodInput = driver.findElement(By.id("prijsaanbod"));
-        prijsaanbodInput.clear();
-        prijsaanbodInput.sendKeys("5");
+        WebElement prijsAanbodInput = driver.findElement(By.id("prijsaanbod"));
+        prijsAanbodInput.clear();
+        prijsAanbodInput.sendKeys("12");
 
-        driver.findElement(By.id("plaatsBestelling")).click();
+        driver.findElement(By.id("update")).click();
 
-        assertEquals("Winkel", driver.getTitle());
-        ArrayList<WebElement> ps = (ArrayList<WebElement>) driver.findElements(By.tagName("li"));
-        assertTrue(containsWebElementsWithText(ps, "No valid name"));
-        assertEquals("12",driver.findElement(By.id("hoeveelheid")).getAttribute("value"));
-        assertEquals("5",driver.findElement(By.id("prijsaanbod")).getAttribute("value"));
+        assertEquals("Mijn Bestelling", driver.getTitle());
+
+        ArrayList<WebElement> ths = (ArrayList<WebElement>) driver.findElements(By.tagName("th"));
+        assertTrue(containsWebElementsWithText(ths,"kip"));
+
     }
+
     private boolean containsWebElementsWithText(ArrayList<WebElement> elements, String text) {
         for (int i = 0; i < elements.size(); i++) {
             if (elements.get(i).getText().equals(text)) {
@@ -53,8 +57,9 @@ public class NoNameElementTest {
         }
         return false;
     }
-    @After
-    public void clean() {
-        driver.quit();
-    }
+  @After
+   public void clean() {
+      driver.quit();
+  }
+
 }

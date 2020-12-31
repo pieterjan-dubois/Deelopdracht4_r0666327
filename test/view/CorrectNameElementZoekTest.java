@@ -1,5 +1,6 @@
 package view;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -45,8 +46,8 @@ public class CorrectNameElementZoekTest {
         return false;
     }
 
-    /* @After
-   public void clean() {
+    @After
+    public void clean() {
         driver.quit();
-  */
+    }
 }

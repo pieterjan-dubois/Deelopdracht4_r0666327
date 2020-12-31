@@ -1,5 +1,6 @@
 package view;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -57,10 +58,10 @@ public class WebwinkelTest {
 
 
 
-  /* @After
+   @After
    public void clean() {
-        driver.quit();
-  */
+       driver.quit();
+   }
 }
 
 

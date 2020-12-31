@@ -55,8 +55,8 @@ public class NoElementsTest {
         }
         return false;
     }
-     /* @After
-   public void clean() {
+    @After
+    public void clean() {
         driver.quit();
-  */
+    }
 }
